@@ -111,7 +111,7 @@ public class SimulatedECG2 extends JFrame implements ActionListener {
 				    break;
 				}
 				
-				if (connected)
+				if (connected && associatedQ3)
 				{	
 					application.getHeartRatePanel().updateValue(patient.getHeartRate());
 				}

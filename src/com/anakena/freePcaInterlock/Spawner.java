@@ -99,30 +99,11 @@ public class Spawner extends JFrame implements ActionListener {
             @Override
             public void windowClosing(WindowEvent e) {
             	
-            	UIManager.put("OptionPane.background", Color.black);
-            	UIManager.put("Panel.background", Color.BLACK);
-            	//UIManager.put("OptionPane.buttonFont", new Font("Arial", Font.BOLD, 20));
-            	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.ITALIC, 20));
-            	Icon yesIcon = new ImageIcon("src/com/anakena/freePcaInterlock/Yes.png", null);
-            	//UIManager.
-            	//UIManager.put("OptionPane.buttonAreaBorder", BorderFactory.createLineBorder(Color.green));
-            	//UIManager.put("OptionPane.buttonPadding", 100);
-            	UIManager.put("OptionPane.yesIcon", yesIcon);
-            	UIManager.put("OptionPane.yesButtonText", "");
-            	
-            	
-            	final JButton conButton = new JButton("Yes");
-            	conButton.setBackground(Color.ORANGE);
-            	Object[] buttonRowObjects = new Object[] {
-            	  conButton, "Cancel"
-            	};
-            	
                 int confirm = JOptionPane.showOptionDialog(null, "Closing the" +
-                		" spawner application will result in shutting down the system.  \nContinue?"
-                		, "Exit Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                		" spawner application will result in shutting down the system.  \nContinue?", "Exit Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                 if (confirm == 0) {
-                   dispose();
-                   System.exit(0);
+                    dispose();
+                    System.exit(0);
                 }
             }
         };

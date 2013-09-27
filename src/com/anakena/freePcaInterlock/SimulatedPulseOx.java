@@ -111,7 +111,7 @@ public class SimulatedPulseOx extends JFrame implements ActionListener {
 				    break;
 				}
 				
-				if (connected)
+				if (connected && associatedQ2)
 				{	
 					application.getO2Panel().updateValue(patient.getOxygenSaturation());
 					application.getPulseRatePanel().updateValue(patient.getPulseRate());
